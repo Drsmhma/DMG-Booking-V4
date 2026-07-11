@@ -350,7 +350,8 @@
 
         <div class="field">
           <label>رقم تليفون ولي الأمر <span class="req">*</span></label>
-          <input type="tel" id="parentPhone" required>
+          <input type="tel" id="parentPhone" inputmode="numeric" maxlength="11" pattern="\d{11}" required>
+          <span class="hint">11 رقم فقط بدون فراغات</span>
         </div>
 
         <div class="field">
@@ -519,6 +520,12 @@ form.addEventListener('submit', function(e){
     return;
   }
 
+  const parentPhone = document.getElementById('parentPhone').value.trim();
+  if(!/^\d{11}$/.test(parentPhone)){
+    showError('رقم تليفون ولي الأمر يجب أن يتكون من 11 رقم فقط');
+    return;
+  }
+
   const payload = {
     studentName: document.getElementById('studentName').value.trim(),
     nationalId: nationalId,
@@ -529,7 +536,7 @@ form.addEventListener('submit', function(e){
     actionType: document.getElementById('actionType').value,
     disabilityType: document.getElementById('disabilityType').value.trim(),
     iqScore: document.getElementById('iqScore').value.trim(),
-    parentPhone: document.getElementById('parentPhone').value.trim(),
+    parentPhone: parentPhone,
     bookingDate: document.getElementById('bookingDate').value,
     timeSlot: document.getElementById('timeSlot').value
   };
