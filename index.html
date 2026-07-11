@@ -50,7 +50,7 @@
     text-align:center;
     line-height:1.7;
   }
-  .header-title .line1{font-size:14px; font-weight:500; color:#e7f0dd;}
+  .header-title .line1{font-size:15px; font-weight:800; color:#e7f0dd;}
   .header-title .line2{font-size:15px; font-weight:700; color:#fff;}
   .header-title .line3{font-size:16px; font-weight:800; color:var(--gold-light);}
   .main-title{
@@ -152,7 +152,7 @@
     padding-bottom:8px;
   }
   .ticket-header .gov-text{text-align:right;line-height:1.7;}
-  .ticket-header .gov-text .l1{font-size:15px;color:var(--muted);font-weight:500;}
+  .ticket-header .gov-text .l1{font-size:16px;color:var(--muted);font-weight:800;}
   .ticket-header .gov-text .l2{font-size:16px;color:var(--navy);font-weight:700;}
   .ticket-header .gov-text .l3{font-size:18px;color:var(--gold);font-weight:800;}
   .ticket-header .badge{
@@ -202,19 +202,30 @@
     width:32%;
   }
   .section-title{
-    font-size:16px;font-weight:800;color:#fff;
+    font-size:18px;font-weight:800;color:#fff;
     background:var(--navy);
-    padding:5px 12px;border-radius:6px;
-    display:inline-block;
-    margin:8px 0 5px;
+    padding:9px 16px;border-radius:8px;
+    display:block;
+    width:100%;
+    text-align:center;
+    letter-spacing:.3px;
+    margin:10px 0 8px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.12);
   }
   .docs-list{
-    margin:0 0 8px;padding-inline-start:20px;
-    font-size:14.5px;line-height:1.55;color:var(--text);
+    margin:0 0 12px;padding:12px 20px 12px 16px;
+    font-size:15px;line-height:1.7;color:var(--text);
+    background:#f4f8f2;
+    border:1.5px solid var(--navy);
+    border-radius:8px;
   }
   .notes-list{
-    margin:0 0 8px;padding-inline-start:20px;
-    font-size:13.5px;line-height:1.55;color:var(--danger);
+    margin:0 0 12px;padding:12px 20px 12px 16px;
+    font-size:14.5px;line-height:1.7;color:var(--danger);
+    font-weight:700;
+    background:var(--danger-bg);
+    border:1.5px solid var(--danger);
+    border-radius:8px;
   }
   .ticket-footer{
     margin-top:8px;
@@ -303,13 +314,13 @@
         </div>
 
         <div class="field">
-          <label>الصف الدراسي <span class="req">*</span></label>
-          <input type="text" id="grade" required>
+          <label>اسم المدرسة <span class="req">*</span></label>
+          <input type="text" id="school" required>
         </div>
 
         <div class="field">
-          <label>اسم المدرسة <span class="req">*</span></label>
-          <input type="text" id="school" required>
+          <label>الصف الدراسي <span class="req">*</span></label>
+          <input type="text" id="grade" required>
         </div>
 
         <div class="field">
@@ -401,8 +412,8 @@
           <tr><td class="k">الرقم القومي</td><td id="t_nationalId">-</td></tr>
           <tr><td class="k">الإدارة التعليمية</td><td id="t_eduAdmin">-</td></tr>
           <tr><td class="k">المرحلة التعليمية</td><td id="t_stage">-</td></tr>
-          <tr><td class="k">الصف الدراسي</td><td id="t_grade">-</td></tr>
           <tr><td class="k">اسم المدرسة</td><td id="t_school">-</td></tr>
+          <tr><td class="k">الصف الدراسي</td><td id="t_grade">-</td></tr>
           <tr><td class="k">نوع الإجراء المطلوب</td><td id="t_actionType">-</td></tr>
           <tr><td class="k">نوع الإعاقة</td><td id="t_disabilityType">-</td></tr>
           <tr><td class="k">درجة مقياس الذكاء</td><td id="t_iqScore">-</td></tr>
